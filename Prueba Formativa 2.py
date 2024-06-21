@@ -7,13 +7,19 @@ Pi=0
 Ot=0
 Pv=0
 Ae=0
+Pf=0
 salir=True
 otro=True
 cod=True
+def seguir(sal):
+    if sal ==1:
+        salir=True
+    elif sal ==2:
+        salir=False
 print("Hola Muy buenas Que sushis va a pedir\n")
 while otro==True:
     while salir==True:
-        elec=int(input("Los Rolls disponibles son: \n 1.Pikachu Roll $4500\n 2.Otaku Roll $5000\n 3.Pulpo Venenoso Roll $5200\n 4.Anguila Eléctrica Roll $4800\n\nCual desea elegir ingrese la opcion: "))
+        elec=int(input("Los Rolls disponibles son: 1.Pikachu Roll $4500\n 2.Otaku Roll $5000\n 3.Pulpo Venenoso Roll $5200\n 4.Anguila Eléctrica Roll $4800\n 5.Pollo Frito $5000\nCual desea elegir ingrese la opcion: "))
         print()
 
         if elec == 1:
@@ -65,6 +71,18 @@ while otro==True:
                 salir=True
             elif sal ==2:
                 salir=False
+        elif elec ==5:
+            num=int(input("Cuantos Pollos Fritos lleva: "))
+            print()
+            cant=num*5000
+            total =total+cant
+            cantT=cantT+num
+            Pf=Pf+num
+            sal =int(input(f"Ustes Lleva {num} de Pollo Frito\nDeea algo mas\n 1.si\n 2.No\nIngrese Opcion: "))
+            if sal ==1:
+                salir=True
+            elif sal ==2:
+                salir=False
     system ("cls")
     while cod==True:
         Descu=str(input("Si usted Tiene Un codigo Ingreselo:\n"))
@@ -105,6 +123,7 @@ while otro==True:
         Ot=0
         Pv=0
         Ae=0
+        Pf=0
         salir=True
         otro=True
         cod=True
